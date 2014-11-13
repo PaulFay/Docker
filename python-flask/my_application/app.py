@@ -17,7 +17,8 @@ def e1():
     for i in xrange(1,1000):
        if not i % 5 or not i % 3:
              n = n + i
-    print n
+    print (n)
+    return "Complete"
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
