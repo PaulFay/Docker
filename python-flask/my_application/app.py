@@ -2,18 +2,23 @@ from flask import Flask
 from flask import request
 app = Flask(__name__)
 
-@app.route("//")
+@app.route("/ok")
 def hello():
     return "Hello Okeanus!"
   
-@app.route(".")
+@app.route("/hello")
 def hello():
     return "Hello Everyone!"
 
 
-@app.route("/")
-def hello():
-    return "Hello World!"
+@app.route("/sol1")
+def e1():
+    n = 0
+    for i in xrange(1,1000):
+       if not i % 5 or not i % 3:
+             n = n + i
+
+print n
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
